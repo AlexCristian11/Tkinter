@@ -1,0 +1,28 @@
+import tkinter as tk
+from tkinter import ttk
+
+
+window = tk.Tk()
+window.title('Widgets Sizes')
+window.geometry('500x400+950+200')
+
+
+# widgets
+label1 = ttk.Label(window, text='Label 1', background='green')
+label2 = ttk.Label(window, text='Label 2', background='orange', width=50)
+
+
+# layout
+# label1.pack()
+# label2.pack(fill='x')
+
+# grid
+window.columnconfigure((0,1), weight=1, uniform='a')
+window.rowconfigure((0,1), weight=1, uniform='a')
+
+label1.grid(row=0, column=0)
+label2.grid(row=1, column=0, sticky='nsew')
+
+# run
+window.bind('<Escape>', lambda event: window.quit())
+window.mainloop()
