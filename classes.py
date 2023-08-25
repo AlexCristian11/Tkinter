@@ -60,7 +60,7 @@ class Main(ttk.Frame):
         self.place(relx=.3, y=0, relwidth=.7, relheight=1)
 
         Frame1(self, 'Label text','green','Button text')
-        Frame1(self, 'Label text','red','Button text')
+        Frame1(self, 'Label text','orange','Button text')
 
 
 class Frame1(ttk.Frame):
